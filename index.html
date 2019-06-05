@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container doors" style="background-color: red;">
+		<img src="door.png" class="w-25 door1">
+		<img src="door2.png"  class="w-25 door2">
+		<img src="door3.png"  class="w-25 door3">
+	</div>
+	<div style="background-image: url(bg.jpg); height: 650px; display: none; background-size: 100% 100%" class="location">
+		<h1 class="text-white  pl-3" style="font-size: 30px;">Помогите Гарри найти метлу, палочку и плащь!</h1>
+		<h2 class="text-white text-lowercase pl-3 score_text"  style="font-size: 30px;">0</h2>
+		<button class="btn btn-success ml-3 KNOPKA">Выйти из игры</button>
+		<img src="metla.png" style="width: 100px; position: absolute; margin-left: 300px;  margin-top: 250px;" class="metla" >
+		<img src="palochka.png" style="width: 100px; position: absolute;margin-left: 10px;  margin-top: 10px;" class="palochka">
+		<img src="ring.png" style="width: 100px; position: absolute; margin-left: 400px;  margin-top: 200px;" class="ring">
+		<img src="gun.png" style="width: 200px; position: absolute; margin-left: 800px;  margin-top: 50px;" class="gun">
+		<img src="ILTQq.png" style="width: 100px; position: absolute; margin-left: 900px;  margin-top: 400px;" class="penguin">
+		<img src="mantiya.png" style="width: 100px; position: absolute; margin-left: 250px;  margin-top: 40px;" class="mantiya">
+	</div>
+
+	<div style="background-image: url(peshera.jpg); height: 600px; display: none; background-size: 100% 100%" class="location2">
+		<h1 class="text-white  pl-3" style="font-size: 30px;">Вы заблудились в пещере!!</h1>
+		<h2 class="text-white text-lowercase pl-3 score_text2"  style="font-size: 30px;">0</h2>
+		<button class="btn btn-success ml-3 KNOPKA2">Выйти из игры</button>
+		<img src="fonarik.jpg" style="width: 150px; position: absolute; margin-left: 100px;  margin-top: 420px;" class="fonar">
+		<img src="rac.png" style="width: 150px; position: absolute; margin-left: 600px;  margin-top: 200px; display: none;" class="rac">
+		<button class="btn btn-success ml-3 KNOPKA3" style="display: none;">Вызвать подмогу</button>
+	</div>
+
+	<div class="container test score_text3" style="background-image: url(р.jpg); display: none;">
+		<div class="border py-3 ">
+			<h2>Где находится Хогвартс?</h2>
+		</div>
+		<div class="border py-3 px-3 ans1">
+			<p>На острове</p>
+		</div>
+		<div class="border py-3 px-3 ans2">
+			<p>В России</p>
+		</div>
+		<div class="border py-3 px-3 ans3">
+			<p>На Кавказе</p>
+		</div>
+		<h2 class="text-dark text-lowercase pl-3 score_text3"  style="font-size: 30px;">0</h2>
+		<button class="btn btn-success ml-3 KNOPKA3">Выйти из игры</button>
+	</div>
+
+	<div class="container test2 score_text4" style="background-image: url(р.jpg); display: none;">
+		<div class="border py-3 ">
+			<h2>Куда попал Гарри Поттер?</h2>
+		</div>
+		<div class="border py-3 px-3 ans4">
+			<p>В Пуффендуй</p>
+		</div>
+		<div class="border py-3 px-3 ans5">
+			<p>В Слизерин</p>
+		</div>
+		<div class="border py-3 px-3 ans6">
+			<p>На Кавказ</p>
+		</div>
+		<h2 class="text-dark text-lowercase pl-3 score_text4"  style="font-size: 30px;">0</h2>
+		<button class="btn btn-success ml-3 KNOPKA3">Выйти из игры</button>
+	</div>
+
+	<div class="container test3 score_text5" style="background-image: url(р.jpg); display: none;">
+		<div class="border py-3 ">
+			<h2>Первая часть?</h2>
+		</div>
+		<div class="border py-3 px-3 ans7">
+			<p>Гарри Поттер и философский камень</p>
+		</div>
+		<div class="border py-3 px-3 ans8">
+			<p>Гарри Поттер и Антон</p>
+		</div>
+		<div class="border py-3 px-3 ans9">
+			<p>Гарри Поттер и Кавказ</p>
+		</div>
+		<h2 class="text-dark text-lowercase pl-3 score_text5"  style="font-size: 30px;">0</h2>
+		<button class="btn btn-success ml-3 KNOPKA3">Выйти из игры</button>
+	</div>
+
+
+	<script type="text/javascript">
+		let score = 0;
+		document.querySelector(".door1").onclick=function(){
+			alert("добро пожаловать в Хогвартс!");
+			document.querySelector(".doors").style.display="none";
+			document.querySelector(".location").style.display="block"
+		} 
+		document.querySelector(".metla").onclick=function(){
+			document.querySelector(".metla").style.display="none";
+			score = score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		} 
+		document.querySelector(".palochka").onclick=function(){
+			document.querySelector(".palochka").style.display="none";
+			score = score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		} 
+		document.querySelector(".ring").onclick=function(){
+			alert("Неверно");
+		} 
+		document.querySelector(".gun").onclick=function(){
+			alert("Неверно");
+		} 
+		document.querySelector(".penguin").onclick=function(){
+			alert("Неверно");
+		} 
+		document.querySelector(".mantiya").onclick=function(){
+			document.querySelector(".mantiya").style.display="none";
+			score = score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		} 
+		document.querySelector(".KNOPKA").onclick=function(){
+			alert("Добро пожаловать к дверям!");
+			document.querySelector(".location").style.display="none";
+			document.querySelector(".doors").style.display="block";
+		} 
+
+
+		document.querySelector(".door2").onclick=function(){
+			alert("Вы попали в пещеру!");
+			document.querySelector(".doors").style.display="none";
+			document.querySelector(".location2").style.display="block"
+		} 
+		document.querySelector(".fonar").onclick=function(){
+			document.querySelector(".fonar").style.display="none";
+			document.querySelector(".rac").style.display="block";
+			alert("У вас есть фонарь!");
+		} 
+		document.querySelector(".KNOPKA2").onclick=function(){
+			alert("Добро пожаловать к дверям!");
+			document.querySelector(".location2").style.display="none";
+			document.querySelector(".doors").style.display="block"
+		} 
+		document.querySelector(".rac").onclick=function(){
+			document.querySelector(".rac").style.display="none";
+			document.querySelector(".KNOPKA3").style.display="block";
+			alert("Вы можете вызвать подмогу!");
+		} 
+		document.querySelector(".KNOPKA3").onclick=function(){
+			alert("Подмога в пути! Вы победили!");
+			score = score + 1;
+			document.querySelector(".score_text").innerHTML = score;
+		}
+
+		document.querySelector(".door3").onclick=function(){
+			alert("Тест!");
+			document.querySelector(".doors").style.display="none";
+			document.querySelector(".test").style.display="block"
+		} 
+		document.querySelector(".ans1").onclick=function(){
+			document.querySelector(".test").style.display="none";
+			document.querySelector(".test2").style.display="block"
+			alert("Правильно");
+			score = score + 1;
+			document.querySelector(".score_text3").innerHTML = score;
+		} 
+		document.querySelector(".ans2").onclick=function(){
+			alert("Неверно");
+		} 
+		document.querySelector(".ans3").onclick=function(){
+			alert("Неверно");
+		}
+			document.querySelector(".KNOPKA3").onclick=function(){
+			alert("Добро пожаловать к дверям!");
+			document.querySelector(".test").style.display="none";
+			document.querySelector(".doors").style.display="block";
+		} 
+
+		document.querySelector(".ans4").onclick=function(){
+			document.querySelector(".test2").style.display="none";
+			document.querySelector(".test3").style.display="block"
+			alert("Правильно");
+			score = score + 1;
+			document.querySelector(".score_text4").innerHTML = score;
+		} 
+		document.querySelector(".ans5").onclick=function(){
+			alert("Неверно");
+		} 
+		document.querySelector(".ans6").onclick=function(){
+			alert("Неверно");
+		}
+			document.querySelector(".KNOPKA3").onclick=function(){
+			alert("Добро пожаловать к дверям!");
+			document.querySelector(".test").style.display="none";
+			document.querySelector(".doors").style.display="block";
+		} 
+
+		document.querySelector(".ans7").onclick=function(){
+			document.querySelector(".test3").style.display="none";
+			document.querySelector(".doors").style.display="block"
+			alert("Правильно");
+			score = score + 1;
+			document.querySelector(".score_text5").innerHTML = score;
+		} 
+		document.querySelector(".ans8").onclick=function(){
+			alert("Неверно");
+		} 
+		document.querySelector(".ans9").onclick=function(){
+			alert("Неверно");
+		}
+			document.querySelector(".KNOPKA3").onclick=function(){
+			alert("Добро пожаловать к дверям!");
+			document.querySelector(".test").style.display="none";
+			document.querySelector(".doors").style.display="block";
+		} 
+	</script>
+</body>
+</html>
